@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+         *   {
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h2>Tabbed Image Gallery</h2>
+            <p>Onclick on the image below:</p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="images.html/f-1.jpg" style="width: 300px;">
+                <img src="images.html/f-1.jpg" style="width: 300px;">
+                <img src="images.html/f-1.jpg" style="width: 300px;">
+            </div>
+        </div>
+
+        <div class="container">
+            <span
+            onclick="this.parentElement.style.display='none'"
+            class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:auto">
+            <div id="imgtext"></div>
+        </div>
+
+        <script>
+            function myFunction(imgs){
+                var ecpandImg=
+                document.getElementById("expandImg");
+                var imgText = document.getElementById("imgtext");
+                expandImg.src = imgs.src;
+                imgText.innerHTML = imgs.alt;
+                expandImg.parentElement.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
